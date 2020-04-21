@@ -62,7 +62,7 @@ func (cif *Cifar100Image) Label() (course, fine byte) {
 	return cif.course, cif.fine
 }
 
-//Decode10 decoes a cifar bin file
+//Decode10 decodes a cifar bin file
 func Decode10(r io.Reader) ([]*Cifar10Image, error) {
 	buffer := make([]byte, 3073)
 	x := make([]*Cifar10Image, 0)
@@ -82,7 +82,7 @@ func Decode10(r io.Reader) ([]*Cifar10Image, error) {
 	}
 }
 
-//Decode100 decoes the CIFAR 100
+//Decode100 decodes the CIFAR 100
 func Decode100(r io.Reader) ([]*Cifar100Image, error) {
 	buffer := make([]byte, 3074)
 	x := make([]*Cifar100Image, 0)
