@@ -1,3 +1,4 @@
+//Package cifar is a small package that decodes cifar bin files
 package cifar
 
 import (
@@ -79,7 +80,6 @@ func Decode10(r io.Reader) ([]*Cifar10Image, error) {
 		copy(cim.data, buffer[1:])
 		x = append(x, cim)
 	}
-	//return nil, errors.New("Unreachable")
 }
 
 //Decode100 decoes the CIFAR 100
@@ -101,5 +101,5 @@ func Decode100(r io.Reader) ([]*Cifar100Image, error) {
 		copy(cim.data, buffer[2:])
 		x = append(x, cim)
 	}
-	//return nil, errors.New("Unreachable")
+
 }
